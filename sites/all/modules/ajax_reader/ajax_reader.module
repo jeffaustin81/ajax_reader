@@ -32,10 +32,9 @@ function ajax_link_response($type = 'ajax', $nid = 0) {
 }
 
 function _ajax_reader_load_noder($nid = 0) {
-    $node = noad_load($nid, NULL, false);
-    if($node) {
-        $vnode = node_view($node);
-        return theme("node", $vnode);
+    // $node = noad_load($nid, NULL, false);
+    // if($node) {
+    //     $vnode = node_view($node);
+    //     return theme("node", $vnode);
+    return views_embed_view('front', 'page_1', $nid);
     }
-}
-?>
