@@ -1,0 +1,5 @@
+name = Ajax Reader
+description = Ajax reader custom module
+package = Epicodus Examples
+core = 7.x
+files[] = ajax_reader.module
