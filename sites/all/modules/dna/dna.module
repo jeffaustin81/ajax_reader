@@ -53,3 +53,12 @@ function dna_form_submit($form, &$form_state) {
     $_SESSION['result'] = $output;
 
 }
+
+function dna_success() {
+  $result_display = $_SESSION['result'];
+  if($result_display === TRUE) {
+    return $result_display;
+  } else {
+    return '<p>ERROR!!!</p>';
+  }
+}
