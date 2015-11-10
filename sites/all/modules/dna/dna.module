@@ -1,0 +1,27 @@
+<?php
+
+function dna_menu() {
+  $items['dna'] = array(
+    'title' => 'DNA',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('dna_form'),
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['dna_success_page'] = array(
+    'title' => 'DNA Results',
+    'page callback' => 'dna_success',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK
+  );
+  return $items;
+}
+
+function dna_form() {
+  $form['dna_input'] = array(
+    '#title' => 'DNA Sequence',
+    '#type' => 'textfield',
+    '#description' => t('Please enter half of DNA sequence.'),
+    '#element_validate' => array(),
+    '#required' => TRUE,
+  );

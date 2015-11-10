@@ -1,0 +1,5 @@
+name = DNA
+description = DNA module that reveals other side of helix.
+package = Epicodus Examples
+core = 7.x
+files[] = dna.module
